@@ -1,0 +1,13 @@
+.DS_Store
+.build/
+.swiftpm/
+DerivedData/
+dist/
+*.xcarchive/
+*.dSYM/
+QuotaBar.app/
+QuotaBar *.app/
+*.zip
+*.zip.sha256
+local.codex.quotabar.plist
+PkgInfo
