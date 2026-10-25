@@ -1,0 +1,25 @@
+name: Rename repository to quotabar
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rename:
+    if: github.repository == 'Liuzhewen2757/1'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rename repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CURRENT_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          curl --fail-with-body --location --silent --show-error \
+            --request PATCH \
+            --header "Accept: application/vnd.github+json" \
+            --header "Authorization: Bearer ${GH_TOKEN}" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${CURRENT_REPO}" \
+            --data '{"name":"quotabar"}'
