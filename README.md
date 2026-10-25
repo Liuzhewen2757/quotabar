@@ -20,6 +20,10 @@ macOS 菜单栏额度查看器。它每 60 秒通过本机 Codex app-server 的�
 
 若显示“找不到 ChatGPT.app 内的 Codex CLI”，请先安装并登录 ChatGPT。应用会依次检查 `/Applications/ChatGPT.app` 和 `~/Applications/ChatGPT.app`。
 
+## 下载
+
+GitHub 上提供已校验的通用版压缩包：[QuotaBar-0.4.0-macOS-universal.zip](https://github.com/Liuzhewen2757/quotabar/raw/main/dist/QuotaBar-0.4.0-macOS-universal.zip)。下载后解压并打开 `QuotaBar.app`；校验值见同目录的 `.sha256` 文件。
+
 ## 说明
 
 额度和重置时间来自 Codex 当前登录账号。工具只读取额度，不保存或输出认证令牌。官方 Usage 页面仍是最终核对来源。
