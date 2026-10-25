@@ -106,7 +106,7 @@ final class QuotaBarDelegate: NSObject, NSApplicationDelegate {
         if let primary = model.primary {
             addUsage(primary, title: "当前周期", to: menu)
         } else {
-            let item = NSMenuItem(title: "缓存显示：剩余 (model.cachedRemaining)%*", action: nil, keyEquivalent: "")
+            let item = NSMenuItem(title: "缓存显示：剩余 \(model.cachedRemaining)%*", action: nil, keyEquivalent: "")
             item.isEnabled = false
             menu.addItem(item)
         }
